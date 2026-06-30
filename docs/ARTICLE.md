@@ -1,4 +1,4 @@
-# SafeWell — Help us stop children from dying in borewells 🕳️🚸
+# SafeWell — Preventing borewell tragedies, together 🕳️🚸
 
 *A call for collaborators, domain experts, and comments.*
 
