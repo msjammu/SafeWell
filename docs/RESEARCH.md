@@ -64,6 +64,26 @@
 5. **Rain and water ingress repeatedly complicate operations** (Sujith Wilson 2019,
    Nirvair 2026).
 
+## Why caps get removed: the groundwater-recharge tension
+
+A naive "seal every borewell" mandate misses *why* many dry bores are deliberately left open:
+farmers reuse them as **recharge wells**, channelling excess monsoon runoff from fields into
+the aquifer. This serves two real needs at once — **cheap drainage** of waterlogged fields
+during heavy rain, and **groundwater replenishment** in over-extracted regions. A cap that
+blocks this will simply be removed again, exactly as the original factory caps were.
+
+But uncontrolled recharge carries a **hidden cost: groundwater pollution.** Field runoff routed
+straight down a borehole **bypasses the natural soil-and-strata filtration** that normally
+cleans recharging water, injecting **fertiliser nitrates, pesticide residues, silt, and
+microbial contaminants directly into the aquifer** that supplies drinking water.
+
+India's **Central Ground Water Board (CGWB)** publishes artificial-recharge / managed-aquifer-
+recharge guidance that specifies **silt traps and filter beds (gravel–sand–charcoal)** ahead of
+any recharge structure — but, like the safety guidelines, these are seldom implemented at the
+farm level. The safe answer is therefore **not** a blanket seal, but a **child-safe recharge
+cap (a locked grille with sub-limb apertures) combined with proper filtration**, satisfying
+child safety, drainage, and water quality together.
+
 ## Legal & policy context
 
 - Following the 2006 Prince case, the **Supreme Court of India issued borewell safety
@@ -82,6 +102,9 @@
   the enforcement gap that every source identifies as the persistent failure.
 - IoT detection (Phase 2) and rescue coordination (Phase 3) address the secondary
   detection-lag and response-method weaknesses.
+- Prevention must **accommodate legitimate recharge use** via child-safe recharge caps and
+  filtration — a blanket-sealing approach would be removed by farmers and ignores the
+  associated **groundwater-pollution** risk (a Phase 4 water-quality concern).
 
 ## References
 

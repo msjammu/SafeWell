@@ -62,6 +62,30 @@ See [RESEARCH.md](RESEARCH.md) for the full sourced incident timeline, patterns,
 - % of reported open wells inspected/capped within SLA.
 - Coverage: number of wells registered per district.
 
+### 2.1 Design constraint — work *with* groundwater recharge, don't fight it
+
+Many "uncovered" borewells are open **on purpose**: farmers remove caps to use dry bores as
+**recharge wells**, draining excess monsoon runoff into the aquifer (cheap field drainage +
+groundwater replenishment). A solution that simply demands sealing will be defeated the same
+way the original caps were — removed. Worse, this practice routes **untreated field runoff
+(fertilisers, pesticides, silt, microbes) straight into groundwater**, bypassing natural soil
+filtration and risking aquifer pollution.
+
+SafeWell therefore treats prevention as **two compliant states**, not a single "capped" goal:
+
+| Compliant state | Requirement |
+|---|---|
+| **Sealed** | Locked, load-bearing cap; or filled with mud/sand if permanently abandoned |
+| **Safe recharge well** | Child-safe grille/mesh (apertures far smaller than a child's limb) **plus** a recharge structure — silt trap + filter media (gravel → sand → charcoal) before the bore |
+
+Implications:
+- The registry records each well's `use_type` and recharge compliance.
+- The reporting flow asks whether a well is used for recharge, so authorities **retrofit a
+  safe recharge cap + filter** instead of just sealing it.
+- **Groundwater quality** becomes a first-class concern (Phase 4).
+- This aligns with **Central Ground Water Board (CGWB)** artificial-recharge norms that already
+  specify silt traps and filter beds but are seldom followed at the farm level.
+
 ---
 
 ## 3. Solution overview
@@ -146,6 +170,8 @@ erDiagram
       string district
       string state
       enum status  "active abandoned capped open unknown"
+      enum use_type  "none recharge"
+      enum recharge_compliance  "na noncompliant safe_cap filtered safe_cap_and_filtered"
       int depth_ft
       string owner_name
       timestamp last_inspected_at
@@ -158,6 +184,7 @@ erDiagram
       string photo_url
       enum severity  "low medium critical"
       enum status  "new acknowledged assigned resolved"
+      bool used_for_recharge  "reporter-indicated"
       string reporter_contact  "optional"
       timestamp created_at
     }
@@ -165,7 +192,7 @@ erDiagram
       uuid id
       uuid borewell_id
       uuid inspector_id
-      enum outcome  "capped pending not_found"
+      enum outcome  "sealed recharge_retrofit pending not_found"
       string notes
       timestamp inspected_at
     }
@@ -223,7 +250,9 @@ sequenceDiagram
 ### 7.2 Authority triage
 1. Official sees new report on the map, sorted by severity/SLA timer.
 2. Acknowledges → assigns an inspector → status moves `new → acknowledged → assigned`.
-3. Inspector records outcome; if capped, linked borewell status → `capped`.
+3. Inspector records the outcome: a non-recharge well is **sealed** (status → `capped`); a
+   recharge well gets a **safe recharge cap + filter retrofit** (`use_type = recharge`,
+   `recharge_compliance = safe_cap_and_filtered`).
 
 ---
 
@@ -235,7 +264,7 @@ sequenceDiagram
 | **1 (MVP)** | Registry + reporting PWA + dashboard + alerts | Prevention/enforcement live |
 | **2** | ESP32 smart-cap + fall/intrusion detection over MQTT | Real-time detection |
 | **3** | Rescue-coordination + live depth/camera telemetry | Faster, safer rescues |
-| **4** | Gov data integration + hotspot prediction analytics | Scale & policy impact |
+| **4** | Gov data integration + hotspot prediction + groundwater-quality monitoring for recharge wells | Scale, policy & aquifer protection |
 
 ---
 
@@ -248,6 +277,8 @@ sequenceDiagram
 | Spam / false reports | Lightweight reporter verification (OTP), official triage, dedupe by geo proximity |
 | Photo storage cost | Compress client-side; lifecycle policies; MinIO in dev |
 | Data privacy (reporter contact) | Optional contact, encrypted at rest, role-scoped access |
+| Caps removed for recharge use | Promote **child-safe recharge caps + filtration** as the compliant alternative, not blanket sealing |
+| Recharge wells polluting groundwater | Require silt trap + filter media; flag recharge wells for water-quality monitoring (Phase 4) |
 
 ---
 
