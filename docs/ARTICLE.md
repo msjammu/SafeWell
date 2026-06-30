@@ -37,7 +37,7 @@ It's a recurring, preventable failure:
 > late.** So the highest-leverage place to act is *before* the fall.
 
 📚 *Full sourced timeline and references:*
-[docs/RESEARCH.md](docs/RESEARCH.md)
+[docs/RESEARCH.md](https://github.com/msjammu/SafeWell/blob/main/docs/RESEARCH.md)
 
 ## What SafeWell is
 
@@ -55,7 +55,7 @@ We're starting with **Phase 1 (Prevent)** because it's fully buildable in softwa
 hardware to deliver value, and tackles the root cause.
 
 🧭 *The full plan and architecture:*
-[docs/PLANNING.md](docs/PLANNING.md)
+[docs/PLANNING.md](https://github.com/msjammu/SafeWell/blob/main/docs/PLANNING.md)
 
 ## Where this is going
 
