@@ -16,6 +16,7 @@ prolonged, dangerous rescues that frequently end in tragedy. A representative ca
   rescue. Water ingress and rain complicated a 12+ hour multi-agency (NDRF/SDRF/Army)
   operation. The District Commissioner attributed the incident to **negligence — the
   borewell was left uncovered** — and publicly appealed to farmers to cap their wells.
+  ([The Tribune](https://www.tribuneindia.com/news/haryana/4-year-old-boy-falls-into-borewell-at-ambala-village-rescue-operation-on/))
 
 The failure chain is consistent across such incidents:
 
