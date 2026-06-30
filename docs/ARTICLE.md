@@ -29,8 +29,9 @@ It's a recurring, preventable failure:
   unrecorded.
 - India has an estimated **27 million borewells**. When one dries up, the cap and casing are
   often pulled out, leaving a narrow, deep, invisible trap.
-- **Rescue frequently fails — even after the child is reached.** Children die from slipping
-  deeper, oxygen loss, water ingress, hypothermia, and injuries.
+- **Rescue frequently falls short — even after the child is reached.** Outcomes are often
+  heartbreaking, due to slipping deeper, oxygen depletion, water ingress, hypothermia, and
+  injuries.
 
 > The hardest, most important truth: **by the time a rescue starts, it's often already too
 > late.** So the highest-leverage place to act is *before* the fall.
@@ -40,7 +41,7 @@ It's a recurring, preventable failure:
 
 ## What SafeWell is
 
-**SafeWell** is an open project to attack borewell deaths across three pillars:
+**SafeWell** is an open project to prevent borewell tragedies across three pillars:
 
 1. **Prevent** — a geo-tagged **registry** of borewells + a **public "report an open well"**
    app + **owner accountability and compliance** tracking. This directly targets the
